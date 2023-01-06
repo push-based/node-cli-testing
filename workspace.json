@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "cli-testing": "packages/cli-testing"
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
+}
