@@ -11,7 +11,8 @@
   "keywords": [
     "testing",
     "cli",
-    "node"
+    "node",
+    "DX"
   ],
   "peerDdependencies": {},
   "dependencies": {}
