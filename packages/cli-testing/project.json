@@ -30,7 +30,7 @@
         }
       ],
       "options": {
-        "postTargets": ["cli:npm", "cli:github"],
+        "postTargets": ["node-cli-testing:npm", "node-cli-testing:github"],
         "commitMessageFormat": "release(${projectName}): ${version}",
         "noVerify": true,
         "push": true
@@ -54,7 +54,7 @@
       "options": {
         "commands": [
           {
-            "command": "cd ./dist/packages/cli"
+            "command": "cd ./dist/packages/node-cli-testing"
           },
           {
             "command": "npm link -f"
