@@ -5,6 +5,11 @@
     "declaration": true,
     "types": [
       "node"
+    ],
+    "lib": [
+      "dom",
+      "es5",
+      "es2015"
     ]
   },
   "paths": {
