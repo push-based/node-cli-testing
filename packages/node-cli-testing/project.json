@@ -11,7 +11,10 @@
         "outputPath": "dist/packages/node-cli-testing",
         "main": "packages/node-cli-testing/src/index.ts",
         "tsConfig": "packages/node-cli-testing/tsconfig.lib.json",
-        "assets": ["packages/node-cli-testing/*.md"]
+        "assets": [
+          "packages/node-cli-testing/*.md",
+          "README.md"
+        ]
       }
     },
     "lint": {
