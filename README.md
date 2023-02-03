@@ -16,14 +16,14 @@ This is what this library tackles. A smooth out of the box experience for testin
 
 ## Features
 
-- Testing node process output (`stdout`, `stderr`, `exitCode`)
-- Handle `.rc.jons` files
-- Simulate keyboard interaction
-- Test console output
-- Initializing a sandbox environment for each test
-- Automatically creating files needed for the test 
-- Cleanup after tests
-- Helpers to check the generated files and folders of a node process
+- 🚥 Testing node process output (`stdout`, `stderr`, `exitCode`)
+- 🧠 Handle `.rc.jons` files
+- ⌨️ Simulate keyboard interaction
+- 💬 Test console output
+- 🥸 Initializing a sandbox environment for each test
+- ⚙️ Automatically creating files needed for the test 
+- 🧹 Cleanup after tests
+- 🦮 Helpers to check the generated files and folders of a node process
 
 ## Install
 
