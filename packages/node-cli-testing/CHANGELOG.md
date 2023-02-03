@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.1](https://github.com/push-based/node-cli-testing/compare/node-cli-testing-0.2.0...node-cli-testing-0.2.1) (2023-02-03)
+
+
+### Bug Fixes
+
+* fix withProject utils ([c5bade6](https://github.com/push-based/node-cli-testing/commit/c5bade63edd9647df35f056afe9d62883070769e))
+
+
+
 # [0.2.0](https://github.com/push-based/node-cli-testing/compare/node-cli-testing-0.1.1...node-cli-testing-0.2.0) (2023-02-03)
 
 
