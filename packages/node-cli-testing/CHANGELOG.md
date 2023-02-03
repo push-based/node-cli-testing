@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.2.0](https://github.com/push-based/node-cli-testing/compare/node-cli-testing-0.1.1...node-cli-testing-0.2.0) (2023-02-03)
+
+
+### Features
+
+* add withProject to utils ([ec29da1](https://github.com/push-based/node-cli-testing/commit/ec29da126392512e7522c4167b3608e974606f62))
+
+
+
 ## [0.1.1](https://github.com/push-based/node-cli-testing/compare/node-cli-testing-0.1.0...node-cli-testing-0.1.1) (2023-01-11)
 
 
