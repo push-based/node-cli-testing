@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.2](https://github.com/push-based/node-cli-testing/compare/node-cli-testing-0.2.1...node-cli-testing-0.2.2) (2023-02-03)
+
+
+### Bug Fixes
+
+* add typing ([cb8fae1](https://github.com/push-based/node-cli-testing/commit/cb8fae1a849ca53e149ba472be08962ee4603836))
+* add typing ([dff0a91](https://github.com/push-based/node-cli-testing/commit/dff0a91f8846a404f3fc0f5346209cbd89f73022))
+
+
+
 ## [0.2.1](https://github.com/push-based/node-cli-testing/compare/node-cli-testing-0.2.0...node-cli-testing-0.2.1) (2023-02-03)
 
 
