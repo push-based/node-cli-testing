@@ -50,7 +50,7 @@ export function withProject<T extends { }>(cfg: any, fn: (prj: unknown) => Promi
   return async () => {
     let prj = await CliProjectFactory.create<T>(cfg);
     await prj.setup();
-    await fn(prj).finally(prj.teardown);
+    await fn(prj).finally(() => prj.teardown());
   }
 }
 
