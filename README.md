@@ -53,6 +53,9 @@ describe('The CLI configuration in default mode', () => {
   beforeEach(async () => {
     projectSandbox = await CliProjectFactory.create(cfg);
   });
+  afterEach(async () => {
+    projectSandbox = await CliProjectFactory.teardown(cfg);
+  });
 
   it('should work', async () => {
     const { exitCode, stdout, stderr } = await projectSandbox.exec();
@@ -83,6 +86,9 @@ describe('The CLI', () => {
   beforeEach(async () => {
     projectSandbox = await CliProjectFactory.create(cfg);
   });
+  afterEach(async () => {
+    projectSandbox = await CliProjectFactory.teardown(cfg);
+  });
 
   it('should work', async () => {
     const { exitCode, stdout, stderr } = await projectSandbox.exec();
@@ -90,6 +96,42 @@ describe('The CLI', () => {
     expect(stderr).toBe('');
     expect(exitCode).toBe(0);
   });
+
+});
+```
+
+### Use setup helper
+
+As is it kind of repetitive to set up `beforeEach` and `afterEach` this library provides a helper. 
+This comes in handy when there are many different setups in one describe block. 
+
+The helper consumes a configuration for the project and handles setup and teardown internally.
+
+```ts
+import { ProjectConfig, withProject } from '@push-based/node-cli-testing/cli-project';
+
+const cfg: ProjectConfig = {
+  root: './',
+  bin: 'cli.js' 
+};
+const cfg2: ProjectConfig = {
+  root: './other/',
+  bin: 'cli.js' 
+};
+
+describe('The CLI', () => {
+
+  it('should work in version 1', withProject(cfg, async (prj) => {
+    const { exitCode } = await prj.exec();
+    expect(exitCode).toBe(0);
+   })
+  );
+  
+  it('should work in version 2', withProject(cfg2, async (prj) => {
+    const { exitCode } = await prj.exec();
+    expect(exitCode).toBe(0);
+   })
+  );
 
 });
 ```
