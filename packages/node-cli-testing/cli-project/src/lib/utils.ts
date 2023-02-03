@@ -1,7 +1,8 @@
 import * as fs from 'fs';
-import { ProcessParams } from './types';
+import { ProcessParams, ProjectConfig } from './types';
 import * as path from 'path';
 import {CliProjectFactory} from "./factory";
+import {CliProject} from "./cli";
 
 export function getFolderContent(folders: string[]): string[] {
   return folders.flatMap((d) => {
@@ -46,9 +47,12 @@ export function processParamsToParamsArray(params: ProcessParams): string[] {
   }) as string[];
 }
 
-export function withProject<T extends { }>(cfg: any, fn: (prj: unknown) => Promise<void>): () => Promise<void> {
-  return async () => {
-    let prj = await CliProjectFactory.create<T>(cfg);
+export function withProject<T extends {}>(
+  cfg: any,
+  fn: (prj: unknown) => Promise<void>,
+  factory: Record<'create', (cfg: ProjectConfig<T>) => Promise<CliProject<T>>> = CliProjectFactory
+): () => Promise<void> {  return async () => {
+    let prj = await factory.create(cfg);
     await prj.setup();
     await fn(prj).finally(() => prj.teardown());
   }
