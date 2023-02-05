@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { ProcessParams, ProjectConfig } from './types';
+import {ProcessParams, ProjectConfig} from './types';
 import * as path from 'path';
 import {CliProjectFactory} from "./factory";
 import {CliProject} from "./cli";
@@ -48,13 +48,12 @@ export function processParamsToParamsArray(params: ProcessParams): string[] {
 }
 
 export function withProject<T extends {}>(
-  cfg: any,
-  fn: (prj: unknown) => Promise<void>,
-  factory: Record<'create', (cfg: ProjectConfig<T>) => Promise<CliProject<T>>> = CliProjectFactory
+  cfg: ProjectConfig<T>,
+  fn: (prj: CliProject<T>) => Promise<void>,
+  factory: (cfg: ProjectConfig<T>) => Promise<CliProject<T>> = CliProjectFactory.create
 ): () => Promise<void> {  return async () => {
-    let prj = await factory.create(cfg);
-    await prj.setup();
-    await fn(prj).finally(() => prj.teardown());
-  }
+  let prj = await factory(cfg);
+  await prj.setup();
+  await fn(prj).finally(() => prj.teardown());
 }
-
+}
