@@ -2,6 +2,10 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.3](https://github.com/push-based/node-cli-testing/compare/node-cli-testing-0.2.2...node-cli-testing-0.2.3) (2023-02-05)
+
+
+
 ## [0.2.2](https://github.com/push-based/node-cli-testing/compare/node-cli-testing-0.2.1...node-cli-testing-0.2.2) (2023-02-03)
 
 
