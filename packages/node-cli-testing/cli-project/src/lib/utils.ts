@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { ProcessParams, ProjectConfig } from './types';
+import {ProcessParams, ProjectConfig} from './types';
 import * as path from 'path';
 import {CliProjectFactory} from "./factory";
 import {CliProject} from "./cli";
