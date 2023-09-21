@@ -367,5 +367,7 @@ describe('The CLI configuration in default mode', () => {
 The above test would be equivalent to:
 `node cli.js my-command --count=42`
 
+---
 
+made with ❤ by [push-based.io](https://www.push-based.io)
 
